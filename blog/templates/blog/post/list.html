@@ -1,0 +1,13 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    My first blog
+{% endblock %}
+
+{% block content %}
+<h1>My Blog List</h1>
+    {% for post in posts %}
+  <h2><a href="{{ post.id }}">{{ post.title }}</a></h2>
+  <p>Published {{ post.published }} by {{ post.author }}</p>
+    {% endfor %}
+{% endblock %}
