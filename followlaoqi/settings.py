@@ -82,4 +82,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, "static"), )
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+# TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST_USER = '913100561@qq.com'
+EMAIL_HOST_PASSWORD = 'qinzeyu920930'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

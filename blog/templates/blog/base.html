@@ -1,16 +1,19 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% block title %}{% endblock %}</title>
-  </head>
-  <body>
-    <div>
-      {% block content %}
-      {% endblock %}
-    </div>
-    <hr>
-    <div>
-      <p>welcome you. This is my blog.</p>
-    </div>
-  </body>
+<html lang="zh-CN">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% include 'blog/header.html' %}
+
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+            {% include 'blog/footer.html' %}
+
+    </body>
 </html>
